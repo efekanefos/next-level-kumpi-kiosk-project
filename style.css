@@ -73,7 +73,8 @@
   font-weight: bold;
   letter-spacing: 0.15rem;
 }
-.productsNavbar__closeBtn {
+.productsNavbar__closeBtn,
+.popUpCard__closeBtn {
   position: relative;
   background-color: #fff;
   padding: 2rem 2rem;
@@ -83,7 +84,9 @@
   margin-right: -0.5rem;
 }
 .productsNavbar__closeBtn__line1,
-.productsNavbar__closeBtn__line2 {
+.productsNavbar__closeBtn__line2,
+.popUpCard__closeBtn__line1,
+.popUpCard__closeBtn__line2 {
   width: 0.2rem;
   position: absolute;
   top: 20%;
@@ -93,10 +96,12 @@
   display: inline-block;
   height: 2.5rem;
 }
-.productsNavbar__closeBtn__line1 {
+.productsNavbar__closeBtn__line1,
+.popUpCard__closeBtn__line1 {
   transform: rotate(45deg);
 }
-.productsNavbar__closeBtn__line2 {
+.productsNavbar__closeBtn__line2,
+.popUpCard__closeBtn__line2 {
   transform: rotate(-45deg);
 }
 .productsNavbar {
@@ -112,6 +117,7 @@
 .productsMain {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  position: relative;
 }
 .productsMain__sideBar {
   grid-column: 1 / 3;
@@ -121,7 +127,8 @@
 .productsMain__dealSide {
   grid-column: 3 / 8;
 }
-.dealSide__heading {
+.dealSide__heading,
+.customize__heading {
   font-size: 2.25rem;
 }
 .sideBar__list {
@@ -257,7 +264,7 @@
   border-radius: 2rem;
   width: 40.5rem;
   position: relative;
-  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.30196078431372547);
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
 }
 .healthyMeals__heading {
   font-size: 3rem;
@@ -313,3 +320,185 @@
 }
 
 /*! ProductsMain End */
+
+.popUpCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 24%;
+  text-align: center;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
+}
+.popUpCard__Img {
+  width: 35rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+.popUpCard__heading,
+.popUpCard__itemPrice {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: bold;
+}
+.popUpCard__itemPrice {
+  margin-bottom: 1.5rem;
+}
+.popUpCard__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popUpCard__text {
+  font-size: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.buttons__addOrder,
+.buttons__customize {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  width: 13rem;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+}
+.buttons__addOrder {
+  background-color: #f1bc00;
+}
+.buttons__customize {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.popUpCard__closeBtn {
+  position: absolute;
+  top: -8%;
+  right: -3%;
+}
+
+/*? Customize Section start */
+
+.removeListItem {
+  color: #eb0000;
+}
+.customizeProducts {
+  margin-right: 5rem;
+  min-height: 75rem;
+  max-height: 75rem;
+  width: 99%;
+  overflow-y: scroll;
+}
+.customizeProducts__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
+  padding: 1rem;
+  width: 80%;
+  position: relative;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.customizeProducts__text,
+.customizeProducts__price {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+.customizeProducts__price {
+  font-weight: bold;
+}
+.customizeProducts__checkBox,
+.customizeProducts__circle,
+.removeProducts__checkBox,
+.removeProducts__circle {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+}
+.customizeProducts__checkBox,
+.removeProducts__checkBox {
+  display: none;
+}
+.customizeProducts__checkBox ~ .customizeProducts__circle,
+.removeProducts__checkBox ~ .removeProducts__circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.customizeProducts__checkBox:checked ~ .customizeProducts__circle {
+  background-color: #ffbb29;
+}
+.removeProducts__checkBox:checked ~ .removeProducts__circle {
+  background-color: #d82e20;
+}
+.extraProtein,
+.saladsVegs,
+.potatoSection,
+.removeSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 5rem;
+}
+
+.customize__heading {
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.customizeButtons,
+.removeButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.customizeButtons__save,
+.customizeButtons__cancel,
+.removeButtons__addBasket,
+.removeButtons__cancel {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 1px solid #000;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.customizeButtons__save,
+.removeButtons__addBasket {
+  background-color: #f1bc00;
+  border: none;
+}
+.customizeButtons__cancel,
+.removeButtons__cancel {
+  background-color: #fff;
+}
+.activeRemoveItem {
+  background-color: #eb0000;
+  color: #fff;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.nonActiveListItem {
+  background-color: #fff;
+}
