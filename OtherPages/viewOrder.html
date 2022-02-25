@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../app.js" defer></script>
+    <title>ProductsHome</title>
+  </head>
+  <body>
+    <section class="productsHome">
+      <!-- productsNavbar Start  -->
+      <nav class="productsNavbar">
+        <div class="productsNavbar__logoSection">
+          <img class="customizeLogo" src="../img/productsLogo.png" alt="productsLogo" />
+          <span class="logoSection__textSpan">/ VIEW MY ORDER</span>
+        </div>
+        <div class="productsNavbar__closeBtn">
+          <span class="productsNavbar__closeBtn__line1"></span>
+          <span class="productsNavbar__closeBtn__line2"></span>
+        </div>
+      </nav>
+
+      <!-- productsNavbar End  -->
+
+      <!-- productsMain Start  -->
+
+      <section class="viewOrder">
+        <div class="viewOrder__card">
+          <img class="viewOrder__productImg" src="../img/popUpImgCrop.jpg" alt="viewOrderImg" />
+          <div class="viewOrder__productInfo">
+            <h3 class="productInfo__heading">LEMON & CHILLI CHICKEN</h3>
+            <p class="productInfo__text">BROWNIE & Coca Cola REGULAR</p>
+            <p class="productInfo__price">£12.90</p>
+          </div>
+          <div class="viewOrder__productCounter">
+            <button class="productCounter__minusBtn"><span class="minusText">-</span></button>
+            <p class="productCounter__productCount">1</p>
+            <button class="productCounter__plusBtn">+</button>
+          </div>
+          <button class="viewOrder__editBtn"><span class="editBtn__text">...</span></button>
+        </div>
+
+        <div class="viewOrder__card">
+          <img class="viewOrder__productImg" src="../img/popUpImgCrop.jpg" alt="viewOrderImg" />
+          <div class="viewOrder__productInfo">
+            <h3 class="productInfo__heading">BEEF MEATBALL TOMATO</h3>
+            <p class="productInfo__text"></p>
+            <p class="productInfo__price">£8.95</p>
+          </div>
+          <div class="viewOrder__productCounter">
+            <button class="productCounter__minusBtn"><span class="minusText">-</span></button>
+            <p class="productCounter__productCount">1</p>
+            <button class="productCounter__plusBtn">+</button>
+          </div>
+          <button class="viewOrder__editBtn"><span class="editBtn__text">...</span></button>
+        </div>
+
+        <div class="viewOrder__card">
+          <img class="viewOrder__productImg" src="../img/popUpImgCrop.jpg" alt="viewOrderImg" />
+          <div class="viewOrder__productInfo">
+            <h3 class="productInfo__heading">DEAL FOR 2</h3>
+            <p class="productInfo__text">WP Chorizo, SW house Kumpi (+£1.00), hummus pot, warm cheese sauce, Coca Cola regular, still water, brownie</p>
+            <p class="productInfo__price">£24.95</p>
+          </div>
+          <div class="viewOrder__productCounter">
+            <button class="productCounter__minusBtn"><span class="minusText">-</span></button>
+            <p class="productCounter__productCount">1</p>
+            <button class="productCounter__plusBtn">+</button>
+          </div>
+          <button class="viewOrder__editBtn"><span class="editBtn__text">...</span></button>
+        </div>
+        <div class="viewOrderButtons">
+          <a href="#" class="viewOrderButtons__checkOut">Check out: £27.80</a>
+          <a href="#" class="viewOrderButtons__backToMenu">Back to menu</a>
+        </div>
+      </section>
+
+      <!-- productsMain End  -->
+    </section>
+  </body>
+</html>

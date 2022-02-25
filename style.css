@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "DINCondensedBold";
+  src: url("./fonts/DINCondensedBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica.ttf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaLight";
+  src: url("./fonts/HelvaticaLight.ttf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("./fonts/HelvaticaNeue.ttf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("./fonts/HelveticaBold.ttf") format("opentype");
+}
 /*! Home Start */
 
 .wrapper {
@@ -33,7 +53,7 @@
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 0.15rem;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "DINCondensedBold";
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.1843137254901961);
   width: 24rem;
@@ -55,7 +75,7 @@
   margin: 0 auto;
   background-color: #f2f2f2;
   /*overflow-y: hidden;*/
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "DINCondensedBold";
 }
 .productsNavbar__logoSection {
   display: flex;
@@ -70,8 +90,8 @@
   font-size: 2.4rem;
   width: 100%;
   padding-left: 2rem;
-  font-weight: bold;
   letter-spacing: 0.15rem;
+  font-family: "DINCondensedBold";
 }
 .productsNavbar__closeBtn,
 .popUpCard__closeBtn {
@@ -231,7 +251,7 @@
 }
 .popularItems__mealName,
 .sweetProducts__mealName {
-  bottom: -10%;
+  bottom: -15%;
   left: 50%;
   font-size: 2rem;
   text-align: center;
@@ -279,19 +299,20 @@
   background-color: #fff;
   border-radius: 5rem;
   width: 82%;
-  margin-left: 2rem;
+  margin-left: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  margin-top: 3rem;
+  padding: 2rem 1rem;
+  margin-top: 1.5rem;
+  font-family: "HelveticaBold";
 }
 .basket__total {
   position: relative;
 }
 .basket__itemName {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   padding-left: 4rem;
 }
@@ -300,9 +321,9 @@
   border-radius: 5rem;
   text-align: center;
   width: 15rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   margin-right: 1rem;
 }
 .basket__total__price {
@@ -347,6 +368,7 @@
 }
 .popUpCard__itemPrice {
   margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 .popUpCard__buttons {
   display: flex;
@@ -358,10 +380,11 @@
   font-size: 1rem;
   width: 70%;
   margin: 0 auto;
+  font-family: "HelveticaLight";
 }
 .buttons__addOrder,
 .buttons__customize {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: #000;
   display: inline-block;
@@ -370,6 +393,7 @@
   font-weight: bold;
   border-radius: 3rem;
   margin-bottom: 1rem;
+  font-family: "Helvetica";
 }
 .buttons__addOrder {
   background-color: #f1bc00;
@@ -416,7 +440,9 @@
 .customizeProducts__price {
   margin: 0.5rem;
   font-size: 1.25rem;
+  font-family: "HelveticaNeue";
 }
+
 .customizeProducts__price {
   font-weight: bold;
 }
@@ -461,36 +487,43 @@
   margin-bottom: 1rem;
 }
 .customizeButtons,
-.removeButtons {
+.removeButtons,
+.viewOrderButtons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 6rem;
+  font-family: "Helvetica";
 }
 
 .customizeButtons__save,
 .customizeButtons__cancel,
 .removeButtons__addBasket,
-.removeButtons__cancel {
-  font-size: 2rem;
-  padding: 1rem;
+.removeButtons__cancel,
+.viewOrderButtons__checkOut,
+.viewOrderButtons__backToMenu {
+  font-size: 1.5rem;
+  padding: 1.2rem 1rem;
   border: 1px solid #000;
-  width: 50%;
+  width: 25rem;
   text-align: center;
   margin-bottom: 1rem;
   border-radius: 3rem;
   text-decoration: none;
   color: #000;
-  font-weight: 600;
+  font-weight: bold;
+  font-family: "HelveticaBold";
 }
 .customizeButtons__save,
-.removeButtons__addBasket {
+.removeButtons__addBasket,
+.viewOrderButtons__checkOut {
   background-color: #f1bc00;
   border: none;
 }
 .customizeButtons__cancel,
-.removeButtons__cancel {
+.removeButtons__cancel,
+.viewOrderButtons__backToMenu {
   background-color: #fff;
 }
 .activeRemoveItem {
@@ -501,4 +534,114 @@
 }
 .nonActiveListItem {
   background-color: #fff;
+}
+
+/** View Order Start */
+
+.viewOrder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.viewOrder__card {
+  display: flex;
+  background-color: #fff;
+  width: 51rem;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  position: relative;
+  padding: 1rem;
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
+}
+.viewOrder__productImg {
+  width: 15rem;
+  margin-left: 1.5rem;
+}
+.viewOrder__productInfo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "HelveticaNeue";
+}
+.productInfo__heading,
+.productInfo__text {
+  margin: 0;
+  margin-top: 0rem;
+  font-size: 1rem;
+}
+.productInfo__text {
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.productInfo__heading {
+  font-size: 1.5rem;
+  width: 90%;
+}
+.productInfo__price {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.viewOrder__productCounter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translate(-50%, -50%);
+}
+.productCounter__minusBtn *,
+.productCounter__plusBtn * {
+  display: inline-block;
+  height: 5rem;
+}
+.productCounter__minusBtn,
+.productCounter__plusBtn {
+  outline: none;
+  border: none;
+  background-color: #ffbb29;
+  border-radius: 50%;
+  font-size: 1.9rem;
+  padding: 0.1rem 0.65rem;
+  display: inline-block;
+}
+.minusText {
+  height: 2.5rem;
+}
+.productCounter__productCount {
+  font-size: 2.25rem;
+}
+
+.productCounter__minusBtn {
+  margin-right: 2rem;
+  padding: 0rem 0.9rem;
+}
+.productCounter__plusBtn {
+  margin-left: 2rem;
+}
+.viewOrder__editBtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+  background-color: #ffbb29;
+  border-radius: 50%;
+}
+.viewOrderButtons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
