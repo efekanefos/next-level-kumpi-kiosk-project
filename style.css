@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: "DINCondensedBold";
   src: url("./fonts/DINCondensedBold.ttf") format("opentype");
@@ -65,7 +64,7 @@
 
 /*! Home End */
 
-/*? ProductsNavbar Start */
+/*? header Start */
 .productsHome {
   margin: 0;
   padding: 0;
@@ -77,14 +76,14 @@
   /*overflow-y: hidden;*/
   font-family: "DINCondensedBold";
 }
-.productsNavbar__logoSection {
+.header__logoSection {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-top: 5%;
 }
 .logoSection__logo {
-  width: 80%;
+  width: 15.625rem;
 }
 .logoSection__textSpan {
   font-size: 2.4rem;
@@ -93,7 +92,7 @@
   letter-spacing: 0.15rem;
   font-family: "DINCondensedBold";
 }
-.productsNavbar__closeBtn,
+.header__closeBtn,
 .popUpCard__closeBtn {
   position: relative;
   background-color: #fff;
@@ -103,8 +102,8 @@
   margin-top: 2.5rem;
   margin-right: -0.5rem;
 }
-.productsNavbar__closeBtn__line1,
-.productsNavbar__closeBtn__line2,
+.header__closeBtn__line1,
+.header__closeBtn__line2,
 .popUpCard__closeBtn__line1,
 .popUpCard__closeBtn__line2 {
   width: 0.2rem;
@@ -116,42 +115,44 @@
   display: inline-block;
   height: 2.5rem;
 }
-.productsNavbar__closeBtn__line1,
+.header__closeBtn__line1,
 .popUpCard__closeBtn__line1 {
   transform: rotate(45deg);
 }
-.productsNavbar__closeBtn__line2,
+.header__closeBtn__line2,
 .popUpCard__closeBtn__line2 {
   transform: rotate(-45deg);
 }
-.productsNavbar {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
 }
-/*? ProductsNavbar End */
+/*? header End */
 
-/*! ProductsMain Start */
+/*! main Start */
 
-.productsMain {
+.main {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   position: relative;
 }
-.productsMain__sideBar {
+.main__sideBar,
+.connectedNavbar {
   grid-column: 1 / 3;
   padding-top: 6rem;
   height: 60%;
 }
-.productsMain__dealSide {
+.main__dealSide {
   grid-column: 3 / 8;
 }
-.dealSide__heading,
-.customize__heading {
+
+.sectionHeading {
   font-size: 2.25rem;
 }
-.sideBar__list {
+.sideBar__list,
+.connectedNavbar__list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -159,7 +160,8 @@
   align-items: flex-start;
   padding-left: 0;
 }
-.sideBar__list__listItem {
+.sideBar__list__listItem,
+.connectedNavbar__list__listItem {
   font-size: 2.25rem;
   font-weight: bold;
   background-color: #fff;
@@ -168,9 +170,19 @@
   padding: 1rem;
   padding-left: 2.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 1px 2.5px 5px rgba(36, 65, 93, 0.30196078431372547);
+  box-shadow: 1px 2.5px 5px rgba(36, 65, 93, 0.3);
+  border-top-right-radius: 8rem;
+  border-bottom-right-radius: 8rem;
 }
-.sideBar__list a {
+.connectedNavbar__list__listItem {
+  margin-bottom: 0.25rem;
+  color: #adadad;
+}
+.connectedNavbar__list__listItem.activeListItem {
+  color: #000;
+}
+.sideBar__list a,
+.connectedNavbar__list a {
   text-decoration: none;
   color: #000;
 }
@@ -181,8 +193,8 @@
   color: #339b11;
 }
 .activeListItem {
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 8rem;
+  border-bottom-right-radius: 8rem;
   background-color: #f1bc00;
 }
 .sweetListItem.activeListItem,
@@ -237,7 +249,7 @@
 }
 .popularItems__priceCircle,
 .popularItems__mealName,
-.healthyMeals__priceCircle,
+.cardWithText__priceCircle,
 .sweetProducts__priceCircle,
 .sweetProducts__mealName {
   position: absolute;
@@ -265,20 +277,20 @@
   align-items: center;
 }
 .popularItems__priceCircle,
-.healthyMeals__priceCircle,
+.cardWithText__priceCircle,
 .sweetProducts__priceCircle {
   background-color: #f1bc00;
-  padding: 1.25rem 0.5rem;
+  padding: 1.25rem 0.8rem;
   border-radius: 50%;
   font-size: 1.5rem;
 }
-.healthyMeals__priceCircle {
-  top: 5%;
+.cardWithText__priceCircle {
+  top: 3%;
   position: absolute;
-  right: -7%;
+  right: -9%;
 }
-.healthyMeals {
-  margin-top: -1.5rem;
+.cardWithText {
+  margin-top: -0.5rem;
   background-color: #fff;
   height: 26.5rem;
   border-radius: 2rem;
@@ -286,7 +298,14 @@
   position: relative;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
 }
-.healthyMeals__heading {
+.cardWithText__Img {
+  width: 40.5rem;
+  height: 20.5rem;
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cardWithText__heading {
   font-size: 3rem;
   width: 100%;
   text-align: center;
@@ -340,7 +359,7 @@
   border-radius: 50%;
 }
 
-/*! ProductsMain End */
+/*! main End */
 
 .popUpCard {
   position: absolute;
@@ -413,13 +432,20 @@
 .removeListItem {
   color: #eb0000;
 }
-.customizeProducts {
+.customizeProducts,
+.scrollableContainer {
   margin-right: 5rem;
   min-height: 75rem;
   max-height: 75rem;
   width: 99%;
   overflow-y: scroll;
 }
+.scrollableContainer {
+  margin-top: 4rem;
+  max-height: 75rem;
+  margin-bottom: 2.75rem;
+}
+/* tartış */
 .customizeProducts__card {
   display: flex;
   flex-direction: column;
@@ -441,6 +467,7 @@
   margin: 0.5rem;
   font-size: 1.25rem;
   font-family: "HelveticaNeue";
+  text-align: center; /* sonradan */
 }
 
 .customizeProducts__price {
@@ -481,10 +508,10 @@
   margin-right: 5rem;
 }
 
-.customize__heading {
+.sectionHeading {
   margin: 0;
   margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .customizeButtons,
 .removeButtons,
@@ -693,6 +720,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 4rem;
+}
+.dealBoxes a {
+  text-decoration: none;
+  color: #000;
 }
 .dealBox__heading {
   margin-bottom: 0;

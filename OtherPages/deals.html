@@ -17,23 +17,23 @@
   <body>
     <section class="productsHome">
       <!-- productsNavbar Start  -->
-      <nav class="productsNavbar">
-        <div class="productsNavbar__logoSection">
+      <header class="header">
+        <div class="header__logoSection">
           <img class="logoSection__logo" src="../img/productsLogo.png" alt="productsLogo" />
           <span class="logoSection__textSpan">/ DEALS</span>
         </div>
-        <div class="productsNavbar__closeBtn">
-          <span class="productsNavbar__closeBtn__line1"></span>
-          <span class="productsNavbar__closeBtn__line2"></span>
+        <div class="header__closeBtn">
+          <span class="header__closeBtn__line1"></span>
+          <span class="header__closeBtn__line2"></span>
         </div>
-      </nav>
+      </header>
 
       <!-- productsNavbar End  -->
 
-      <!-- productsMain Start  -->
+      <!-- main Start  -->
 
-      <section class="productsMain">
-        <div class="productsMain__sideBar">
+      <main class="main">
+        <nav class="main__sideBar">
           <ul class="sideBar__list">
             <li class="sideBar__list__listItem">HOME</li>
             <li class="sideBar__list__listItem activeListItem">DEALS</li>
@@ -49,24 +49,26 @@
             <li class="sideBar__list__listItem">DRINKS</li>
             <li class="sideBar__list__listItem">Allergen</li>
           </ul>
-        </div>
-        <div class="productsMain__dealSide">
-          <h3 class="dealSide__heading">DEAL LOVERS!</h3>
+        </nav>
+        <div class="main__dealSide">
+          <h3 class="sectionHeading">DEAL LOVERS!</h3>
 
           <img class="dealSide__valentineBanner" src="../img/valentine.jpg" alt="valentinesDeal" />
 
           <div class="dealBoxes">
-            <div class="dealBox">
-              <h3 class="dealBox__heading">
-                DEAL FOR 1 <br />
-                £12.50
-              </h3>
-              <ul class="dealBox__list">
-                <li class="dealBox__list__listItem">1x Kumpi</li>
-                <li class="dealBox__list__listItem">1x Snack pot</li>
-                <li class="dealBox__list__listItem">1x Drink</li>
-              </ul>
-            </div>
+            <a href="./dealFor.html">
+              <div class="dealBox">
+                <h3 class="dealBox__heading">
+                  DEAL FOR 1 <br />
+                  £12.50
+                </h3>
+                <ul class="dealBox__list">
+                  <li class="dealBox__list__listItem">1x Kumpi</li>
+                  <li class="dealBox__list__listItem">1x Snack pot</li>
+                  <li class="dealBox__list__listItem">1x Drink</li>
+                </ul>
+              </div>
+            </a>
             <div class="dealBox">
               <h3 class="dealBox__heading">
                 DEAL FOR 2 <br />
@@ -107,7 +109,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <section class="basket">
         <p class="basket__itemName">Hello!</p>
@@ -117,7 +119,7 @@
         </div>
       </section>
 
-      <!-- productsMain End  -->
+      <!-- main End  -->
     </section>
   </body>
 </html>

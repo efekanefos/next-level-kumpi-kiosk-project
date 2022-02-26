@@ -18,12 +18,16 @@ if (logoSection__textSpan.textContent === "/ SWEET POTATOES") {
 const cancelOrderPopup = document.querySelector(".cancelOrderPopup");
 const productCounter__minusBtns = document.querySelectorAll(".productCounter__minusBtn");
 const buttons__no = document.querySelector(".buttons__no");
-cancelOrderPopup.style.display = "none";
-productCounter__minusBtns.forEach((minusBtn) => {
-  minusBtn.addEventListener("click", () => {
-    cancelOrderPopup.style.display = "flex";
-  });
-});
-buttons__no.addEventListener("click", () => {
+
+if (logoSection__textSpan.textContent === "/ VIEW MY ORDER") {
   cancelOrderPopup.style.display = "none";
-});
+  productCounter__minusBtns.forEach((minusBtn) => {
+    minusBtn.addEventListener("click", () => {
+      cancelOrderPopup.style.display = "flex";
+    });
+  });
+  buttons__no.addEventListener("click", () => {
+    cancelOrderPopup.style.display = "none";
+  });
+} else {
+}
