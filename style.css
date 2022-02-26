@@ -210,65 +210,73 @@
   background-color: #339b11;
 }
 
-.dealSide__valentineBanner {
+.cardWithImage {
   border-radius: 2rem;
-  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.30196078431372547);
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
 }
-
-.dealSide__popularItems {
-  display: flex;
+.cardWithImgContainer {
+  position: relative;
+  padding-top: 7rem;
 }
-.sweetProducts {
+.sectionHeading.cardText {
+  position: absolute;
+  top: 8rem;
+  left: 6.5rem;
+  transform: translate(-50%, -50%);
+}
+.productContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 5rem;
+  padding-right: 3rem;
+}
+.scrollProductContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   overflow-y: scroll;
   max-height: 90%;
   padding: 1rem;
-  padding-top: 2rem;
+  margin-top: 7rem;
+  padding-top: 0rem;
   padding-left: 0;
-  padding-right: 0;
-  height: 82rem;
+  padding-right: 2rem;
+  height: 76rem;
+  justify-items: center;
 }
-.popularItems__leftCard {
-  margin-right: 2rem;
-}
-.popularItems__leftCard,
-.popularItems__rightCard,
-.sweetProducts__leftCard,
-.sweetProducts__rightCard {
+
+.productContainer__card,
+.scrollProductContainer__card {
   position: relative;
   border-radius: 1.8rem;
   width: 18.75rem;
   height: 18.125rem;
-  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.30196078431372547);
+  box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
+  margin-top: 1.5rem;
 }
-.sweetProducts__leftCard,
-.sweetProducts__rightCard {
+.scrollProductContainer__card {
   margin-bottom: 2.2rem;
 }
-.popularItems__priceCircle,
-.popularItems__mealName,
+.productContainer__card__priceCircle,
+.productContainer__card__mealName,
 .cardWithText__priceCircle,
-.sweetProducts__priceCircle,
-.sweetProducts__mealName {
+.scrollProductContainer__priceCircle,
+.scrollProductContainer__mealName {
   position: absolute;
   transform: translate(-50%, -50%);
   font-weight: bold;
 }
-.popularItems__priceCircle,
-.sweetProducts__priceCircle {
+.productContainer__card__priceCircle,
+.scrollProductContainer__priceCircle {
   top: 5%;
   right: -20%;
 }
-.popularItems__mealName,
-.sweetProducts__mealName {
+.productContainer__card__mealName,
+.scrollProductContainer__mealName {
   bottom: -15%;
   left: 50%;
   font-size: 2rem;
   text-align: center;
 }
-.sweetProducts__mealName {
+.scrollProductContainer__mealName {
   bottom: -3rem;
   width: 100%;
   height: 5rem;
@@ -276,9 +284,9 @@
   justify-content: center;
   align-items: center;
 }
-.popularItems__priceCircle,
+.productContainer__card__priceCircle,
 .cardWithText__priceCircle,
-.sweetProducts__priceCircle {
+.scrollProductContainer__priceCircle {
   background-color: #f1bc00;
   padding: 1.25rem 0.8rem;
   border-radius: 50%;
@@ -360,7 +368,16 @@
 }
 
 /*! main End */
-
+.popUpOverlay {
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1080px;
+  height: 100vh;
+  opacity: 0.8;
+}
 .popUpCard {
   position: absolute;
   top: 50%;
