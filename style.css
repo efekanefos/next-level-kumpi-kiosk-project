@@ -463,7 +463,8 @@
   margin-bottom: 2.75rem;
 }
 /* tartış */
-.customizeProducts__card {
+.customizeProducts__card,
+.radioProducts__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -480,42 +481,64 @@
 }
 
 .customizeProducts__text,
-.customizeProducts__price {
+.customizeProducts__price,
+.radioProducts__text,
+.radioProducts__price {
   margin: 0.5rem;
   font-size: 1.25rem;
   font-family: "HelveticaNeue";
   text-align: center; /* sonradan */
 }
-
-.customizeProducts__price {
+.customizeProducts__text,
+.customizeProducts__price,
+.customizeProducts__checkBox,
+.customizeProducts__img,
+.radioProducts__text,
+.radioProducts__price,
+.radioProducts__radioBtn,
+.radioProducts__img {
+  pointer-events: none;
+}
+.radioProducts__card.radioActive {
+  box-shadow: inset 0px 0px 0px 10px #ffbb29;
+}
+.customizeProducts__price,
+.radioProducts__price {
   font-weight: bold;
 }
 .customizeProducts__checkBox,
 .customizeProducts__circle,
 .removeProducts__checkBox,
-.removeProducts__circle {
+.removeProducts__circle,
+.radioProducts__radioBtn,
+.radioProducts__circle {
   position: absolute;
-  top: 5%;
+  top: 8%;
   right: 8%;
 }
 .customizeProducts__checkBox,
-.removeProducts__checkBox {
+.removeProducts__checkBox,
+.radioProducts__radioBtn {
   display: none;
 }
 .customizeProducts__checkBox ~ .customizeProducts__circle,
-.removeProducts__checkBox ~ .removeProducts__circle {
+.removeProducts__checkBox ~ .removeProducts__circle,
+.radioProducts__radioBtn ~ .radioProducts__circle {
   width: 1.5rem;
   height: 1.5rem;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #000;
 }
-.customizeProducts__checkBox:checked ~ .customizeProducts__circle {
+.customizeProducts__checkBox:checked ~ .customizeProducts__circle,
+.radioProducts__radioBtn:checked ~ .radioProducts__circle {
   background-color: #ffbb29;
 }
+
 .removeProducts__checkBox:checked ~ .removeProducts__circle {
   background-color: #d82e20;
 }
+
 .extraProtein,
 .saladsVegs,
 .potatoSection,

@@ -35,3 +35,32 @@ if (logoSection__textSpan.textContent === "/ VIEW MY ORDER") {
   });
 } else {
 }
+
+const customizeProducts__card = document.querySelectorAll(".customizeProducts__card");
+
+customizeProducts__card.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    const checkBox = e.target.children[3];
+    const productCard = e.target;
+    checkBox.checked = !checkBox.checked;
+    checkBox.checked ? (productCard.style.boxShadow = "inset 0px 0px 0px 10px #ffbb29") : (productCard.style.boxShadow = "none");
+  });
+});
+const radioProducts__card = document.querySelectorAll(".radioProducts__card");
+/* hepsini seçiyor malesef */
+
+radioProducts__card.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    card.classList.toggle("radioActive");
+    radioBtn.checked = !radioBtn.checked;
+    let filtered = [...radioProducts__card].filter((productCard) => console.log(productCard));
+
+    filtered.forEach((product) => {
+      console.log(product);
+    });
+    /*
+    radioBtn.checked = !radioBtn.checked;
+    console.log(radioBtn.checked);
+    */
+  });
+});
