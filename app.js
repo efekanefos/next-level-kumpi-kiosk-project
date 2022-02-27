@@ -46,21 +46,19 @@ customizeProducts__card.forEach((card) => {
     checkBox.checked ? (productCard.style.boxShadow = "inset 0px 0px 0px 10px #ffbb29") : (productCard.style.boxShadow = "none");
   });
 });
-const radioProducts__card = document.querySelectorAll(".radioProducts__card");
-/* hepsini seçiyor malesef */
+const radioProducts__card = document.querySelectorAll(".productRow1 .radioProducts__card");
+const radioProducts__card2 = document.querySelectorAll(".productRow2 .radioProducts__card");
 
-radioProducts__card.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    card.classList.toggle("radioActive");
-    radioBtn.checked = !radioBtn.checked;
-    let filtered = [...radioProducts__card].filter((productCard) => console.log(productCard));
-
-    filtered.forEach((product) => {
-      console.log(product);
+function selectThem(nodeList) {
+  nodeList.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      let notChecked = [...nodeList].filter((radioProduct) => !radioProduct.children[3].checked);
+      notChecked.forEach((radioProduct) => {
+        radioProduct.classList.remove("radioActive");
+      });
+      card.classList.add("radioActive");
     });
-    /*
-    radioBtn.checked = !radioBtn.checked;
-    console.log(radioBtn.checked);
-    */
   });
-});
+}
+selectThem(radioProducts__card);
+selectThem(radioProducts__card2);

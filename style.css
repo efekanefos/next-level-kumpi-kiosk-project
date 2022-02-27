@@ -473,11 +473,12 @@
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   width: 80%;
   position: relative;
   border: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  height: 11rem;
 }
 
 .customizeProducts__text,
@@ -502,6 +503,10 @@
 .radioProducts__card.radioActive {
   box-shadow: inset 0px 0px 0px 10px #ffbb29;
 }
+.radioProducts__card.radioActive .radioProducts__circle {
+  background-color: #ffbb29;
+}
+
 .customizeProducts__price,
 .radioProducts__price {
   font-weight: bold;
