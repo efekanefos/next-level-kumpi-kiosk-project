@@ -368,7 +368,8 @@
 }
 
 /*! main End */
-.popUpOverlay {
+.popUpOverlay,
+.cancelOrderOverlay {
   background-color: #f2f2f2;
   position: absolute;
   top: 50%;
