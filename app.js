@@ -1,43 +1,37 @@
 const cards = document.querySelectorAll(".scrollProductContainer");
 const popUpCard = document.querySelector(".popUpCard");
 const popUpCloseBtn = document.querySelector(".popUpCard__closeBtn");
-const logoSection__textSpan = document.querySelector(".logoSection__textSpan");
+const logoSection__breadcrumb = document.querySelector(".logoSection__breadcrumb");
 const popUpOverlay = document.querySelector(".popUpOverlay");
-if (logoSection__textSpan.textContent === "/ SWEET POTATOES") {
-  popUpCard.style.display = "none";
-  popUpOverlay.style.display = "none";
-  cards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      popUpCard.style.display = "flex";
-      popUpOverlay.style.display = "block";
-    });
-  });
-  popUpCloseBtn.addEventListener("click", () => {
-    popUpCard.style.display = "none";
-    popUpOverlay.style.display = "none";
-  });
-} else {
-}
 
 const cancelOrderPopup = document.querySelector(".cancelOrderPopup");
 const productCounter__minusBtns = document.querySelectorAll(".productCounter__minusBtn");
 const buttons__no = document.querySelector(".buttons__no");
 const cancelOrderOverlay = document.querySelector(".cancelOrderOverlay");
 
-if (logoSection__textSpan.textContent === "/ VIEW MY ORDER") {
-  cancelOrderPopup.style.display = "none";
-  cancelOrderOverlay.style.display = "none";
-  productCounter__minusBtns.forEach((minusBtn) => {
-    minusBtn.addEventListener("click", () => {
-      cancelOrderPopup.style.display = "flex";
-      cancelOrderOverlay.style.display = "block";
+const basket = document.querySelector(".basket");
+
+function popUpEvents(breadcrumbText, popUp, overlay, items, closeBtn) {
+  if (logoSection__breadcrumb.textContent === breadcrumbText) {
+    popUp.style.display = "none";
+    overlay.style.display = "none";
+    items.forEach((card) => {
+      card.addEventListener("click", (e) => {
+        popUp.style.display = "flex";
+        overlay.style.display = "block";
+      });
     });
-  });
-  buttons__no.addEventListener("click", () => {
-    cancelOrderPopup.style.display = "none";
-    cancelOrderOverlay.style.display = "none";
-  });
-} else {
+    closeBtn.addEventListener("click", () => {
+      popUp.style.display = "none";
+      overlay.style.display = "none";
+    });
+  }
+}
+popUpEvents(`/ SWEET POTATOES`, popUpCard, popUpOverlay, cards, popUpCloseBtn);
+popUpEvents(`/ VIEW MY ORDER`, cancelOrderPopup, cancelOrderOverlay, productCounter__minusBtns, buttons__no);
+
+if (logoSection__breadcrumb.textContent === "/ DEAL FOR 2") {
+  basket.style.marginTop = "7.5rem";
 }
 
 const customizeProducts__card = document.querySelectorAll(".customizeProducts__card");
