@@ -450,7 +450,7 @@
 .removeListItem {
   color: #eb0000;
 }
-.customizeProducts,
+.productSection,
 .scrollableContainer {
   margin-right: 5rem;
   min-height: 75rem;
@@ -464,7 +464,7 @@
   margin-bottom: 2.75rem;
 }
 /* tartış */
-.customizeProducts__card,
+.product__card,
 .radioProducts__card {
   display: flex;
   flex-direction: column;
@@ -482,8 +482,8 @@
   height: 11rem;
 }
 
-.customizeProducts__text,
-.customizeProducts__price,
+.product__card__text,
+.product__card__price,
 .radioProducts__text,
 .radioProducts__price {
   margin: 0.5rem;
@@ -491,10 +491,10 @@
   font-family: "HelveticaNeue";
   text-align: center; /* sonradan */
 }
-.customizeProducts__text,
-.customizeProducts__price,
-.customizeProducts__checkBox,
-.customizeProducts__img,
+.product__card__text,
+.product__card__price,
+.product__card__checkBox,
+.product__card__img,
 .radioProducts__text,
 .radioProducts__price,
 .radioProducts__radioBtn,
@@ -508,12 +508,12 @@
   background-color: #ffbb29;
 }
 
-.customizeProducts__price,
+.product__card__price,
 .radioProducts__price {
   font-weight: bold;
 }
-.customizeProducts__checkBox,
-.customizeProducts__circle,
+.product__card__checkBox,
+.product__card__circle,
 .removeProducts__checkBox,
 .removeProducts__circle,
 .radioProducts__radioBtn,
@@ -522,12 +522,12 @@
   top: 8%;
   right: 8%;
 }
-.customizeProducts__checkBox,
+.product__card__checkBox,
 .removeProducts__checkBox,
 .radioProducts__radioBtn {
   display: none;
 }
-.customizeProducts__checkBox ~ .customizeProducts__circle,
+.product__card__checkBox ~ .product__card__circle,
 .removeProducts__checkBox ~ .removeProducts__circle,
 .radioProducts__radioBtn ~ .radioProducts__circle {
   width: 1.5rem;
@@ -536,7 +536,7 @@
   border-radius: 50%;
   border: 1px solid #000;
 }
-.customizeProducts__checkBox:checked ~ .customizeProducts__circle,
+.product__card__checkBox:checked ~ .product__card__circle,
 .radioProducts__radioBtn:checked ~ .radioProducts__circle {
   background-color: #ffbb29;
 }
@@ -545,9 +545,7 @@
   background-color: #d82e20;
 }
 
-.extraProtein,
-.saladsVegs,
-.potatoSection,
+.subProductSection,
 .removeSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

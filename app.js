@@ -34,9 +34,9 @@ if (logoSection__breadcrumb.textContent === "/ DEAL FOR 2") {
   basket.style.marginTop = "7.5rem";
 }
 
-const customizeProducts__card = document.querySelectorAll(".customizeProducts__card");
+const product__card = document.querySelectorAll(".product__card");
 
-customizeProducts__card.forEach((card) => {
+product__card.forEach((card) => {
   card.addEventListener("click", (e) => {
     const checkBox = e.target.children[3];
     const productCard = e.target;
@@ -61,7 +61,7 @@ function selectThem(nodeList) {
 selectThem(radioProducts__card);
 selectThem(radioProducts__card2);
 
-const removeCards = document.querySelectorAll(".removeSection .customizeProducts__card");
+const removeCards = document.querySelectorAll(".removeSection .product__card");
 removeCards.forEach((card) => {
   card.addEventListener("click", (e) => {
     const checkBox = e.target.children[3];
