@@ -241,6 +241,7 @@
   padding-right: 2rem;
   height: 76rem;
   justify-items: center;
+  margin-right: 2rem;
 }
 
 .productContainer__card,
@@ -455,7 +456,7 @@
   margin-right: 5rem;
   min-height: 75rem;
   max-height: 75rem;
-  width: 99%;
+  width: 47rem;
   overflow-y: scroll;
 }
 .scrollableContainer {
@@ -475,11 +476,11 @@
   border-radius: 2rem;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
   padding: 1.5rem 1rem;
-  width: 80%;
+  width: 70%;
   position: relative;
   border: none;
-  margin-bottom: 1.5rem;
-  height: 11rem;
+  margin-bottom: 2.5rem;
+  height: 10rem;
 }
 
 .product__card__text,
@@ -490,6 +491,7 @@
   font-size: 1.25rem;
   font-family: "HelveticaNeue";
   text-align: center; /* sonradan */
+  width: 11rem;
 }
 .product__card__text,
 .product__card__price,
