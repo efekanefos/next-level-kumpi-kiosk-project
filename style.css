@@ -456,7 +456,7 @@
   margin-right: 5rem;
   min-height: 75rem;
   max-height: 75rem;
-  width: 47rem;
+  width: 46rem;
   overflow-y: scroll;
 }
 .scrollableContainer {
@@ -471,7 +471,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
