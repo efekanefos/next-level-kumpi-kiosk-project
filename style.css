@@ -487,10 +487,10 @@
 .radioProducts__text,
 .radioProducts__price {
   margin: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "HelveticaNeue";
   text-align: center; /* sonradan */
-  width: 11rem;
+  line-height: 1.1rem;
 }
 .product__card__text,
 .product__card__price,
@@ -502,6 +502,7 @@
 .radioProducts__img {
   pointer-events: none;
 }
+
 .radioProducts__card.radioActive {
   box-shadow: inset 0px 0px 0px 10px #ffbb29;
 }
