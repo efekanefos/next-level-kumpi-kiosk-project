@@ -20,6 +20,12 @@
 }
 /*! Home Start */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   margin: 0;
   padding: 0;
@@ -89,7 +95,7 @@
   font-size: 2.4rem;
   width: 100%;
   padding-left: 2rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
   font-family: "DINCondensedBold";
 }
 .header__closeBtn,
@@ -108,8 +114,8 @@
 .popUpCard__closeBtn__line2 {
   width: 0.2rem;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 19%;
+  left: 47%;
   transform: translate(-50%, -50%);
   background-color: #000;
   display: inline-block;
@@ -137,6 +143,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   position: relative;
+  overflow: hidden;
 }
 .main__sideBar,
 .connectedNavbar {
@@ -144,12 +151,15 @@
   padding-top: 6rem;
   height: 60%;
 }
-.main__dealSide {
+.main__content {
   grid-column: 3 / 8;
 }
 
 .sectionHeading {
   font-size: 2.25rem;
+}
+.sectionHeading.mb-0 {
+  margin-bottom: 0;
 }
 .sideBar__list,
 .connectedNavbar__list {
@@ -166,9 +176,9 @@
   font-weight: bold;
   background-color: #fff;
   display: inline-block;
-  width: 12rem;
+  width: 16rem;
   padding: 1rem;
-  padding-left: 2.5rem;
+  padding-left: 3rem;
   margin-bottom: 2.5rem;
   box-shadow: 1px 2.5px 5px rgba(36, 65, 93, 0.3);
   border-top-right-radius: 8rem;
@@ -235,32 +245,54 @@
   overflow-y: scroll;
   max-height: 90%;
   padding: 1rem;
-  margin-top: 7rem;
-  padding-top: 0rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
   padding-left: 0;
   padding-right: 2rem;
-  height: 76rem;
+  height: 77rem;
   justify-items: center;
   margin-right: 2rem;
 }
 
 .productContainer__card,
 .scrollProductContainer__card {
-  position: relative;
   border-radius: 1.8rem;
   width: 18.75rem;
   height: 18.125rem;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
   margin-top: 1.5rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  position: relative;
 }
 .scrollProductContainer__card {
-  margin-bottom: 2.2rem;
+  margin-top: 0rem;
+}
+.productContainer__card {
+  margin-bottom: 0;
+}
+.scrollProductContainer__mealName,
+.productContainer__card__mealName {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollProductContainer__cardImg,
+.productContainer__card__cardImg {
+  width: 12rem;
 }
 .productContainer__card__priceCircle,
-.productContainer__card__mealName,
 .cardWithText__priceCircle,
-.scrollProductContainer__priceCircle,
-.scrollProductContainer__mealName {
+.scrollProductContainer__priceCircle {
   position: absolute;
   transform: translate(-50%, -50%);
   font-weight: bold;
@@ -270,21 +302,7 @@
   top: 5%;
   right: -20%;
 }
-.productContainer__card__mealName,
-.scrollProductContainer__mealName {
-  bottom: -15%;
-  left: 50%;
-  font-size: 2rem;
-  text-align: center;
-}
-.scrollProductContainer__mealName {
-  bottom: -3rem;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .productContainer__card__priceCircle,
 .cardWithText__priceCircle,
 .scrollProductContainer__priceCircle {
@@ -319,7 +337,7 @@
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: -3.8rem;
+  bottom: -0.6rem;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -327,13 +345,13 @@
   background-color: #fff;
   border-radius: 5rem;
   width: 82%;
-  margin-left: 3rem;
+  margin-left: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 2rem 1rem;
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   font-family: "HelveticaBold";
 }
 .basket__total {
@@ -474,12 +492,11 @@
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: 5px 5px 15px rgba(36, 65, 93, 0.3);
-  padding: 1.5rem 1rem;
-  width: 70%;
+  padding: 1rem;
+  width: 85%;
   position: relative;
   border: none;
-  margin-bottom: 2.5rem;
-  height: 10rem;
+  margin-bottom: 1.5rem;
 }
 
 .product__card__text,
@@ -496,10 +513,12 @@
 .product__card__price,
 .product__card__checkBox,
 .product__card__img,
+.product__card__circle,
 .radioProducts__text,
 .radioProducts__price,
 .radioProducts__radioBtn,
-.radioProducts__img {
+.radioProducts__img,
+.radioProducts__circle {
   pointer-events: none;
 }
 
@@ -652,7 +671,7 @@
 }
 .productInfo__price {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -0.5rem;
   left: 0;
   font-size: 2rem;
   font-weight: bold;
