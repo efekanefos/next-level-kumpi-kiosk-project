@@ -19,16 +19,24 @@ function popUpEvents(breadcrumbText, popUp, overlay, items, closeBtn) {
       card.addEventListener("click", (e) => {
         popUp.style.display = "flex";
         overlay.style.display = "block";
+        location.hash = "popUpCard";
       });
     });
     closeBtn.addEventListener("click", () => {
       popUp.style.display = "none";
       overlay.style.display = "none";
+      history.replaceState(null, null, " ");
     });
   }
 }
+
 popUpEvents(`/ SWEET POTATOES`, popUpCard, popUpOverlay, cards, popUpCloseBtn);
 popUpEvents(`/ VIEW MY ORDER`, cancelOrderPopup, cancelOrderOverlay, productCounter__minusBtns, buttons__no);
+
+if (location.hash === "#popUpCard") {
+  popUpCard.style.display = "flex";
+  popUpOverlay.style.display = "block";
+}
 
 if (logoSection__breadcrumb.textContent === "/ DEAL FOR 2") {
   basket.style.marginTop = "7.5rem";

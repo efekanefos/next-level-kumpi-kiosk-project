@@ -607,6 +607,7 @@
   color: #000;
   font-weight: bold;
   font-family: "HelveticaBold";
+  cursor: pointer;
 }
 .customizeButtons__save,
 .removeButtons__addBasket,
